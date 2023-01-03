@@ -6,7 +6,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
+/* Navbar */
 .nav-link {
   position: relative;
 }
@@ -22,5 +24,42 @@ body {
   transition: 0.3s ease-in-out;
 }
 .nav-link:hover::after {
+  width: 100%;
+}
+/* Slider */
+.slider {
+  height: calc(100vh - 5rem);
+  width: 500vw;
+  display: flex;
+  transition: 1s ease;
+}
+
+.slide {
+  width: 100vw;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Slide */
+.slide-btn {
+  position: relative;
+}
+
+.slide-btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f97316;
+  width: 0%;
+  transition: 0.3s ease;
+}
+
+.slide-btn:hover::before {
   width: 100%;
 }
