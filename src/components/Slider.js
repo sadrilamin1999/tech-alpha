@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import Slide from "./Slide";
 
 const data = [
   {
@@ -52,11 +53,7 @@ const Slider = () => {
         style={{ transform: `translateX(-${100 * currentSlide}vw)` }}
       >
         {data.map((image) => (
-          <div
-            className="slide"
-            style={{ backgroundImage: `url(${image.src})` }}
-            key={image.id}
-          ></div>
+          <Slide key={image.id} image={image} />
         ))}
       </div>
       <div className="btns absolute z-[1] text-gray-50 flex  gap-10 left-0 right-0 bottom-20 m-auto w-fit">
