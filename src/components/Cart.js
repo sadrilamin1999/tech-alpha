@@ -6,6 +6,7 @@ import { currencyFormatter } from "../utlities/currencyFormatter";
 const Cart = ({ product }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const addToCartHandler = (product) => {
     dispatch(addToCart(product));
     navigate("/cart");
