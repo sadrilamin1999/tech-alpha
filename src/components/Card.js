@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { addToCart } from "../features/products/cartSlice";
 import { currencyFormatter } from "../utlities/currencyFormatter";
 
-const Cart = ({ product }) => {
+const Card = ({ product }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -38,4 +38,4 @@ const Cart = ({ product }) => {
   );
 };
 
-export default Cart;
+export default Card;
